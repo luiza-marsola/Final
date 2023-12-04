@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('background.jpeg');
+    background-size: cover;
+    color: #666;
+}
+
+
+/*Nav - Menu - Title*/
+header {
+    background-color: #F2E9E1;
+    color: #FF9785;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.title {
+    flex: 1;
+}
+
+.title h1 {
+    font-size: 50px;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.title h2 {
+    color: #86B89A;
+    font-size: 28px;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #FF9785;
+    margin-right: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    padding: 10px;
+}
+
+nav ul li a.active {
+    color: #FFD896;
+    border-bottom: 2px solid #FFD896;
+    border-top: 2px solid #FFD896;
+}
+
+/*Image - home page*/
+.image-container {
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+
+/*Home page - content*/
+.centered-box {
+    color: #666;
+    background-color: #F2E9E1;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+    width: 80%; 
+    text-indent: 5px;
+}
+
+.learn-more-link {
+    color: #666;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    text-align: right;
+    margin-top: 10px; 
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.learn-more-link:hover {
+    color: #EBB2FB; 
+}
+
+
+.animated-button {
+    display: block; 
+    margin: 20px auto;
+    padding: 30px 60px; 
+    font-size: 40px; 
+    text-align: center;
+    text-decoration: none;
+    background-color: #86B89A;
+    color: #666;
+    border: 2px solid #86B89A;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 60px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.animated-button:hover {
+    background-color: #FFD896;
+    color: #666;
+    transform: scale(1.1);
+}
+
+/*Quiz page*/
+.paragraph-quiz {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.about-box:nth-of-type(1) {
+    background-color: #86B89A;
+}
+
+.about-box:nth-of-type(2) {
+    background-color: #FFD896;
+}
+
+.about-box:nth-of-type(3) {
+    background-color: #EBB2FB;
+}
+.about-box:nth-of-type(4) {
+    background-color: #FF9785;
+}
+
+.about-box {
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    box-sizing: border-box;
+    text-indent: 10px;
+}
+
+.about-box h3 {
+    color: #666;
+}
+
+.about-box p {
+    color: #666;
+}
+
+.about-box ul {
+    color: #666;
+}
+
+.about-box2 {
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    box-sizing: border-box;
+    text-indent: 10px;
+    background-color: #86B89A ;
+    margin-bottom: 40px;
+}
+
+.about-box2 h3 {
+    color: #666;
+}
+
+.about-box2 p {
+    color: #666;
+}
+
+.about-box2 ul {
+    color: #666;
+}
+
+.quiz-container {
+    background-color: #F2E9E1;
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-bottom: 60px;
+    color:#666;
+}
+
+.question {
+    margin-bottom: 60px;
+}
+
+#quizForm button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #86B89A;
+    color: #666;
+    border: 2px solid #86B89A;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+#quizForm button:hover {
+    background-color: #FFD896;
+    color: #666;
+    transform: scale(1.1);
+}
+
+.popup {
+    background-color: #FF9785; 
+    width: 80%; 
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    text-align: center;
+}
+
+.popup button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #86B89A
+}
+
+h3 {
+    padding: 10px;
+    color: #FF9785;
+    font-size: 30px;
+}
+
+/* Add this style for the GIF pop-up container */
+#gifContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+/* Add this style for the individual GIF pop-up */
+.gif-popup {
+    position: absolute;
+    pointer-events: auto;
+}
