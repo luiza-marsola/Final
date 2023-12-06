@@ -3,7 +3,7 @@
 //https://stackoverflow.com/questions/6510477/how-can-i-list-only-the-folders-in-zip-archive-in-python/6510636#6510636
 //https://developer.mozilla.org/en-US/docs/Web/API/Window/alert
 
-
+//nav
 document.addEventListener("DOMContentLoaded", function () {
     var currentPage = window.location.pathname.split("/").pop();
 
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
+//quiz scores
 function calculateScore() {
     const form = document.getElementById("quizForm");
     const inputs = form.querySelectorAll("input[type=radio]:checked");
@@ -35,6 +35,7 @@ function calculateScore() {
     }
 }
 
+//quiz result popup
 function displayPopupResult(score) {
     let resultMessage = "";
 
@@ -48,7 +49,7 @@ function displayPopupResult(score) {
         resultMessage = "Your digital habits might be seriously affecting your attention span. It's essential to reevaluate and establish boundaries for a healthier relationship with technology.";
     }
 
-    // popup
+    //popup
     const popup = document.createElement("div");
     popup.className = "popup";
     popup.innerHTML = resultMessage;
@@ -66,7 +67,6 @@ function displayPopupResult(score) {
 }
 
 //GIF popups
-
 const gifNames = [
     "distraction1.gif",
     "distraction2.gif",
@@ -85,38 +85,48 @@ const gifNames = [
     "distraction15.gif"
 ];
 
+
+//position
 function getRandomPosition() {
     const x = Math.random() * window.innerWidth;
     const y = Math.random() * window.innerHeight;
     return { x, y };
 }
 
-// create a GIF pop-up
+//create a GIF pop-up
 function createGifPopup(gifName) {
-    const gif = document.createElement("img");
-    gif.src = gifName;
+    const gif = document.createElement("div");
     gif.classList.add("gif-popup");
+
+    const closeButton = document.createElement("button");
+    closeButton.innerText = "X";
+    closeButton.addEventListener("click", () => {
+        gif.remove();
+    });
+
+    const img = document.createElement("img");
+    img.src = gifName;
+    img.style.width = "100%";
+    img.style.height = "100%";
+
+    gif.appendChild(closeButton);
+    gif.appendChild(img);
 
     const position = getRandomPosition();
     gif.style.left = `${position.x}px`;
     gif.style.top = `${position.y}px`;
 
-    //remove the GIF when clicked
-    gif.addEventListener("click", () => {
-        gif.remove();
-    });
-
     document.getElementById("gifContainer").appendChild(gif);
 }
 
-// periodically show a random GIF
+//show a random GIF
 function showRandomGif() {
     const randomGifName = gifNames[Math.floor(Math.random() * gifNames.length)];
     createGifPopup(randomGifName);
 }
 
-//5 second interview
-setInterval(showRandomGif, 5000);
+//10 second interview
+setInterval(showRandomGif, 10000);
 
 
 
