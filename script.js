@@ -128,5 +128,3 @@ function showRandomGif() {
 //10 second interview
 setInterval(showRandomGif, 10000);
 
-
-
